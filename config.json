@@ -1,0 +1,7 @@
+  
+{
+    "dsn": "mysql:host=localhost;dbname=allocin--project;charset=utf8",
+    "user": "isabelleh",
+    "psswd": "oUXv8etg7AzcpA==",
+    "baseUrl": "https://isabelleh.promo-36.codeur.online/allocin--project/"
+}

@@ -24,9 +24,13 @@ hr {
   padding: 20px;
 }
 .navbar-light .navbar-nav .nav-link:hover > .label {
-  background-color: #ec7a6b60;
-  color: #22313f;
+ /* background-color: #daaaa442;
+  color: #22313f;*/
+  border-top: 4px solid #fa2300 ;
+  border-bottom: 4px solid #e1037c;
+  padding: 6px 0; 
 }
+
 
 .navbar-light .navbar-nav .nav-link {
   background-image: -webkit-linear-gradient(#fa2300, #e1037c);
@@ -38,7 +42,12 @@ hr {
   font-size: 2rem;
   font-weight: bold;
   border:1px;
-
+  transition: 0.3s ease;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px 0;
+  margin: 0 20px;
 }
 /*****************************SCROLLBAR*******************************/
 
@@ -63,7 +72,7 @@ hr {
 /* HANDLE ON HOVER */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(225, 3, 40);
+  background: rgb(223, 36, 67);
 }
 
 
@@ -73,8 +82,6 @@ hr {
 .header {
   position: relative;
   border-bottom: 10px solid #6bccef;
-  background-image: url("");
-  background-repeat: repeat;
   background-size: 100vh;
   border: 1px;
 }
@@ -138,7 +145,8 @@ hr {
 }
 
 p {
-  font-size: x-large;
+  font-size: 20px;
+  line-height: 1.3em;
   color: white;
 }
 
@@ -146,9 +154,10 @@ a {
   color: #bfcad1;
 }
 a:hover {
-  background-image: -webkit-linear-gradient(#fa2300, #e1037c);
-  -webkit-background-clip: text;
+
+  
   -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   cursor: pointer;
   text-decoration: none;
 }
@@ -396,8 +405,6 @@ main {
   opacity: 0;
 }
 
-
-
 .container .box2:hover .content {
   opacity: 1;
 }
@@ -515,71 +522,56 @@ main {
 
 
 /************************** Style buttons **************************/
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 20px;
+#container-btn{
+  padding:50px;
+  border:1px;
 }
+.btn-download {
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.buttons {
-  margin: 10%;
+  position: relative;
+  display: inline-block;
+  width: 277px;
+  height: 62px;
+  font-size: 0.5em;
+  font-weight: bold;
+  line-height: 60px;
   text-align: center;
-}
-
-.btn-hover {
-  width: 200px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
+  text-transform: uppercase;
+  background-color: transparent;
   cursor: pointer;
-  margin: 20px;
-  height: 55px;
-  text-align: center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  text-decoration:none;
+  font-family: 'Roboto', sans-serif;
+  font-weight:700;
+  font-size:17px;
+  letter-spacing: 0.045em;
 }
 
-.btn-hover:hover {
-  background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+.btn-download svg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.btn-hover:focus {
-  outline: none;
+.btn-download svg rect {
+  stroke: #00f2fe;
+  stroke-width: 4;
+  stroke-dasharray: 353, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
 }
 
-.btn-hover.color-9 {
-  background-image: linear-gradient(
-    to right,
-    #25aae1,
-    #4481eb,
-    #04befe,
-    #3f86ed
-  );
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+.btn-download span{
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
-/* Darker background on mouse-over */
-
-.btn:hover {
-  background-color: RoyalBlue;
+.btn-download:hover svg rect {
+  stroke-width: 4;
+  stroke-dasharray: 196, 543;
+  stroke-dashoffset: 437;
 }
 
 
@@ -675,7 +667,7 @@ main {
 
 /********************NAV FOOTER*****************/
 #footer {
-  background-color: #6bccef;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   color: white;
   text-align: center;
   font-size: 1.5rem;
@@ -705,6 +697,25 @@ main {
 .copy{
   margin:10px;
 }
+
+
+.icon-hover-zoom{
+  height: 400px;
+  overflow: hidden;
+  padding: 0.5em;
+}
+.icon-hover-zoom img {
+  transition: transform .5s ease;
+}
+.icon-hover-zoom:hover img {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+
+
 
 /********************PARTICULES*****************/
 #particles-js {
