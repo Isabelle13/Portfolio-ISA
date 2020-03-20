@@ -24,8 +24,7 @@ hr {
   padding: 20px;
 }
 .navbar-light .navbar-nav .nav-link:hover > .label {
- /* background-color: #daaaa442;
-  color: #22313f;*/
+ 
   border-top: 4px solid #fa2300 ;
   border-bottom: 4px solid #e1037c;
   padding: 6px 0; 
@@ -48,6 +47,10 @@ hr {
   text-decoration: none;
   padding: 20px 0;
   margin: 0 20px;
+}
+.navbar-toggler{
+  background-image: -webkit-linear-gradient(#fa2300, #e1037c);
+  top:1rem;
 }
 /*****************************SCROLLBAR*******************************/
 
@@ -154,12 +157,10 @@ a {
   color: #bfcad1;
 }
 a:hover {
-
-  
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  color: #e1037c;
   cursor: pointer;
   text-decoration: none;
+
 }
 
 a:focus {
@@ -255,12 +256,7 @@ main {
     margin: 15px auto;
   }
 }
-@media screen and (max-width: 768px) {
-  .container .box {
-    width: 100%;
-    margin: 15px auto;
-  }
-}
+
 
 .container .box .icon {
   position: absolute;
@@ -663,6 +659,14 @@ main {
 .project:hover figcaption,
 .project.hover figcaption {
   height: calc(85%);
+}
+
+@media screen and (max-width: 1200px) {
+  /*taille image 100% .project 100% height: auto;*/
+  .project, .project img{
+    height:auto;
+    width: 100%;
+  }
 }
 
 /********************NAV FOOTER*****************/
